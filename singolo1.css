@@ -91,7 +91,7 @@ header {
     text-decoration: none;
 }
 
-.main-menu a:visited {
+.main-menu a:focus {
     color: #F06C64;
 }
 
