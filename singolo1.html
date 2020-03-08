@@ -13,7 +13,7 @@
             <h1 id="logo">SINGOLO<span class="last-letter">*</span></h1>
             <nav class="main-menu">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li class="active"><a href="#">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#Portfolio">Portfolio</a></li>
                     <li><a href="#About">About</a></li>
@@ -25,10 +25,16 @@
     <main>
         <div id="wrapper-slider">
             <section class="slider">
-                <img src="./assets/iPhone Vertical.png" alt="iPhone Vertical" id="iphone-v">
-                <img src="./assets/iPhone Horizontal.png" alt="iPhone Horizontal" id="iphone-h">
-                <img src="./assets/arrow-left.svg" alt="arrow-left" class="arrows arrow-left">
-                <img src="./assets/arrow-right.svg" alt="arrow-right" class="arrows arrow-right">
+                <img src="./assets/images/iphone Vertical.png" alt="iPhone Vertical" id="iphone-v">
+                <img src="./assets/images/iphone Horizontal.png" alt="iPhone Horizontal" id="iphone-h">
+                <a href="#" class="arrows arrow-left">
+                    <img src="./assets/images/arrow-left.svg" alt="arrow left" class="arrows">
+                    <img src="./assets/images/arrow-left-hover.svg" alt="arrow left hover" class="arrows hover">
+                </a>
+                <a href="#" class="arrows arrow-right">
+                    <img src="./assets/images/arrow-right.svg" alt="arrow-right" class="arrows">
+                    <img src="./assets/images/arrow-right-hover.svg" alt="arrow right hover" class="arrows hover">
+                </a>
             </section>
         </div>
         <div id="wrapper-services">
@@ -36,32 +42,44 @@
                 <h2>Our Services</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <section class="service">
-                    <img src="" alt="">
+                    <div class="service-icon atypical">
+                        <img src="./assets/images/pen.svg" alt="Pen icon" class="atypical">
+                    </div>
                     <h3>Custom Design</h3>
                     <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                 </section>
                 <section class="service">
-                    <img src="" alt="">
+                    <div class="service-icon">
+                        <img src="./assets/images/bulb.svg" alt="Bulb icon">
+                    </div>
                     <h3>Inovative Ideas</h3>
                     <p>Quisque luctus, quam eget molestie com&shy;modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                 </section>
                 <section class="service">
-                    <img src="" alt="">
+                    <div class="service-icon">
+                        <img src="./assets/images/heart.svg" alt="Heart icon">
+                    </div>
                     <h3>Love Is The Answer</h3>
                     <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                 </section>
                 <section class="service">
-                    <img src="" alt="">
+                    <div class="service-icon atypical">
+                        <img src="./assets/images/phone.svg" alt="Phone icon">
+                    </div>
                     <h3>Responsive Layout</h3>
                     <p>Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae&shy;sent elit leo.</p>
                 </section>
                 <section class="service">
-                    <img src="" alt="">
+                    <div class="service-icon">
+                        <img src="./assets/images/bubble.svg" alt="Bubble icon" class="atypical">
+                    </div>
                     <h3>24 / 7 Support</h3>
-                    <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellen&shy;tesque egestas venenatis lorem .</p>
+                    <p>Vivamus vel quam lacinia, tincidunt dui <span class="atypical">non, vehicula nisi. Nulla a sem erat. Pellen</span>&shy;tesque egestas venenatis lorem .</p>
                 </section>
                 <section class="service">
-                    <img src="" alt="">
+                    <div class="service-icon">
+                        <img src="./assets/images/star.svg" alt="Star icon">
+                    </div>
                     <h3>Feel Like A Star</h3>
                     <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
                 </section>
