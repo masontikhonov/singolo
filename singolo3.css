@@ -144,6 +144,13 @@ body {
     height: 186px;
 }
 
+.get-a-quote input[type=submit] {
+    width: auto;
+    height: 38px;
+    cursor: pointer;
+    color: #f0d8d9;
+}
+
 #contacts {
     margin-top: 16px;
 }
