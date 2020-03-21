@@ -110,12 +110,12 @@ header {
     color: #f06c64;
 }
 
-.main-menu {
+#main-menu {
     float: right;
     vertical-align: middle;
 }
 
-.main-menu li {
+#main-menu li {
     margin: 45px 0 35px 0;
     padding-left: 14px;
     font-size: 12px;
@@ -128,26 +128,26 @@ header {
     text-transform: uppercase;
 }
 
-.main-menu li::before {
+#main-menu li::before {
     content: "\00B7";
     color: #494e62;
     margin-right: 14px;
 }
 
-.main-menu li:first-child::before {
+#main-menu li:first-child::before {
     content: none;
 }
 
-.main-menu a {
+#main-menu a {
     color: #FFFFFF;
     text-decoration: none;
 }
 
-.main-menu a:hover {
+#main-menu a:hover {
     color: #f0938d
 }
 
-.main-menu .active a {
+#main-menu .active a {
     color: #F06C64;
 }
 
@@ -367,7 +367,7 @@ div.service-icon.atypical {
     color: #c5c5c5;
 }
 
-.portfolio .wrapper {
+#portfolio > ul {
     display: grid;
     grid-template-columns: repeat(4, 220px);
     grid-template-rows: repeat(3, 187px);
@@ -377,8 +377,16 @@ div.service-icon.atypical {
     overflow: hidden;
 }
 
-.portfolio .wrapper a:hover img {
-    transform: scale(0.9);
+#portfolio li.active img {
+    border: 5px solid #F06C64;
+    width: Calc(100% - 10px);
+    height: Calc(100% - 10px);
+}
+
+#portfolio a:hover img {
+    border: 5px dotted #F06C64;
+    width: Calc(100% - 10px);
+    height: Calc(100% - 10px);
 }
 
 .about-us {
