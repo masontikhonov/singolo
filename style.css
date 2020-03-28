@@ -57,6 +57,11 @@ body {
     font-kerning: normal;
 }
 
+main {
+    position: relative;
+    top: 95px;
+}
+
 #wrapper-header {
     position: fixed;
     z-index: 100;
@@ -69,8 +74,6 @@ body {
 }
 
 #wrapper-slider {
-    position: relative;
-    top: 95px;
     width: 100%;
     height: 594px;
     margin: 0 auto;
@@ -79,7 +82,6 @@ body {
 }
 
 #wrapper-services {
-    position: relative;
     width: 100%;
     height: 494px;
     margin: 0 auto;
@@ -696,6 +698,8 @@ div.service-icon.atypical {
 }
 
 #wrapper-footer {
+    position: relative;
+    top: 95px;
     width: 100%;
     height: 76px;
     margin: 0 auto;
