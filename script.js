@@ -21,6 +21,18 @@ const smoothScroll = (event) => {
     addScrollEvent();
 }
 
+const changeSlide = (event) => {
+    if (event.target.parentElement.tagName === 'A') {
+        const BUTTON = event.target.parentElement;
+        if (BUTTON.className.includes('arrow-left')) {
+            console.log('arrow-left');
+        }
+        if (BUTTON.className.includes('arrow-right')) {
+            console.log('arrow-right');
+        }
+    }
+}
+
 const randomReorder = (event) => {
     if (event.target.tagName === 'A') {
         event.preventDefault();
@@ -87,6 +99,9 @@ const checkPosition = (event) => {
 const MAIN_MENU = document.getElementById('main-menu').querySelector('ul');
 MAIN_MENU.addEventListener('click', makeActive);
 MAIN_MENU.addEventListener('click', smoothScroll);
+
+const SLIDER = document.getElementById('wrapper-slider');
+SLIDER.addEventListener('click', changeSlide);
 
 const PORTFOLIO_MENU = document.getElementById('portfolio-menu').querySelector('ul');
 PORTFOLIO_MENU.addEventListener('click', makeActive);
