@@ -7,7 +7,13 @@ const smoothScroll = (event) => {
     if (event.target.tagName === 'A') {
         event.preventDefault();
     }
-    document.querySelector(event.target.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+    const HREF_TARGET_TOP = document.querySelector(event.target.getAttribute('href')).getBoundingClientRect().top;
+    const scrollByTop = HREF_TARGET_TOP - 95;
+    if (HREF_TARGET_TOP !== 0) {
+        window.scrollBy({top: scrollByTop, behavior: 'smooth'});
+    } else {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }   
 }
 
 const randomReorder = (event) => {
@@ -72,8 +78,4 @@ FORM.addEventListener('submit', preventDefault);
 FORM_SUBMIT.querySelector('.popup .button.close').addEventListener('click', closeFormSubmit);
 FORM_SUBMIT.querySelector('.popup .button.ok').addEventListener('click', closeFormSubmit);
 FORM_SUBMIT.querySelector('.popup .background').addEventListener('click', closeFormSubmit);
-document.addEventListener('keyup', event => {
-    if (event.key === "Escape") {
-        closeFormSubmit();
-    }
-});
+document.addEventListener('keyup', event => {if (event.key === "Escape") {closeFormSubmit();}});
