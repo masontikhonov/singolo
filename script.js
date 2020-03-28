@@ -19,6 +19,36 @@ const randomReorder = (event) => {
     }
 }
 
+const formSubmit = (event) => {
+    const name = FORM[0].value;
+    const email = FORM[1].value;
+    const subject = FORM[2].value;
+    const description = FORM[3].value;
+
+    FORM_SUBMIT.querySelector('#name').textContent = `${name}${FORM_SUBMIT.querySelector('#name').textContent}`;
+    FORM_SUBMIT.querySelector('#email').textContent += ` ${email}`;
+    if (subject !== '') {
+        FORM_SUBMIT.querySelector('#subject').textContent += ` ${subject}`;
+    } else {
+        FORM_SUBMIT.querySelector('#subject').textContent = 'No subject';
+    }
+    if (description !== '') {
+        FORM_SUBMIT.querySelector('#description').textContent += ` ${description}`;
+    } else {
+        FORM_SUBMIT.querySelector('#description').textContent = 'No description';
+    }
+    FORM_SUBMIT.classList.remove('hidden');
+}
+
+const closeFormSubmit = (event) => {
+    FORM_SUBMIT.querySelector('#name').textContent = ', thank you for contacting us.';
+    FORM_SUBMIT.querySelector('#email').textContent = 'Your email:';
+    FORM_SUBMIT.querySelector('#subject').textContent = 'Subject:';
+    FORM_SUBMIT.querySelector('#description').textContent = 'Description:';
+    FORM_SUBMIT.classList.add('hidden');
+    FORM.reset();
+}
+
 const preventDefault = (event) => {
         event.preventDefault();
 }
@@ -34,3 +64,16 @@ PORTFOLIO_MENU.addEventListener('click', randomReorder);
 const PORTFOLIO = document.querySelector("#portfolio");
 PORTFOLIO.addEventListener('click', makeActive);
 PORTFOLIO.addEventListener('click', preventDefault);
+
+const FORM = document.querySelector("#wrapper-quote > section > form");
+const FORM_SUBMIT = document.querySelector('.popup.form-submit');
+FORM.addEventListener('submit', formSubmit);
+FORM.addEventListener('submit', preventDefault);
+FORM_SUBMIT.querySelector('.popup .button.close').addEventListener('click', closeFormSubmit);
+FORM_SUBMIT.querySelector('.popup .button.ok').addEventListener('click', closeFormSubmit);
+FORM_SUBMIT.querySelector('.popup .background').addEventListener('click', closeFormSubmit);
+document.addEventListener('keyup', event => {
+    if (event.key === "Escape") {
+        closeFormSubmit();
+    }
+});
