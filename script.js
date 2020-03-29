@@ -87,7 +87,7 @@ const randomReorder = (event) => {
         event.preventDefault();
         const portfolio = document.querySelector("#portfolio > ul");
         const items = portfolio.children;
-        portfolio.appendChild(items[Math.floor(Math.random() * items.length)]);
+        portfolio.appendChild(items[0]);
     }
 }
 

@@ -74,6 +74,7 @@ main {
 }
 
 #wrapper-slider {
+    font-size: 0px;
     width: 100%;
     height: 594px;
     margin: 0 auto;
@@ -778,4 +779,397 @@ footer {
 
 #social-links a:hover img {
     transform: scale(0.9);
+}
+
+@media (min-width: 768px) and (max-width: 1019px) {
+    body {
+        width: 100%;
+    }
+
+    /* Header */
+
+
+
+
+    .header,
+    .slider,
+    .services,
+    .portfolio,
+    .get-a-quote,
+    .about-us,
+    footer {
+        margin: 0 auto;
+        padding: 0 40px;
+        width: 688px;
+    }
+
+    /* Slider */
+    #wrapper-slider {
+        width: 100%;
+        height: 100%;
+    }
+    .slider {
+        height: 450px;
+        padding: 0 30px;
+        width: 708px;  
+    }
+
+    img.arrows {
+        padding: 210.5px 0px 210.5px 2px;
+        position: absolute;
+    }
+
+    .slider .item img {
+        transform: scale(0.75);
+    }
+
+    .slider #first-slide div.phone.vertical {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    
+    .slider #first-slide .phone.vertical.background {
+        position: absolute;
+        left: 16px;
+        top: 67px;
+    }
+    
+    .slider #first-slide div.phone.horizontal {
+        position: absolute;
+        left: 215px;
+        top: 133px;
+    }
+    
+    .slider #first-slide .phone.horizontal.background {
+        position: absolute;
+        left: 64px;
+        top: 16px;
+    }
+    
+    .slider #second-slide img {
+        position: absolute;
+        left: 80px;
+        top: -20px;
+    }
+    
+    /* Our Services */
+    #wrapper-services {
+        width: 100%;
+        height: 100%;
+    }
+    .services {
+        padding-top: 40px;
+        padding-bottom: 64px;
+        height: 571px;
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 33px 130px 144px 144px 144px;
+        grid-column-gap: 53px;
+    }
+
+    .services h2 {
+        margin-top: 15px;
+    }
+    
+    .services>p {
+        margin-bottom: 28px;
+    }
+    
+    .services>h2, .services>p {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    /* Portfolio */
+    #wrapper-portfolio {
+        width: 100%;
+        height: 100%;
+    }
+    .portfolio {
+        padding-top: 59px;
+        padding-bottom: 73px;
+    }
+
+    #portfolio > ul {
+        height: 794px;
+        display: grid;
+        grid-template-columns: repeat(3, 216px);
+        grid-template-rows: repeat(4, 184px);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        overflow: hidden;
+    }
+    
+    /* About Us */
+    #wrapper-about-us {
+        width: 100%;
+        height: 100%;
+    }
+    .about-us {
+        padding-top: 52px;
+        padding-bottom: 75px;
+    }
+    #team {
+        display: grid;
+        grid-template-columns: 219px 219px 219px;
+        grid-column-gap: 15px;
+        margin-top: 44px;
+    }
+
+    #team img.person {
+        width: 100%;
+    }
+    
+    /* Get a Quote */
+    #wrapper-quote {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .get-a-quote {
+        display: grid;
+        grid-template-columns: 442px 221px;
+        grid-template-rows: auto auto auto;
+        grid-column-gap: 21px;
+        padding-top: 53px;
+        padding-bottom: 60px;
+    }
+    
+    .get-a-quote input, .get-a-quote textarea {
+        width: 412px;
+        padding: 9px 15px 7px;
+        margin-top: 12px;
+        background-color: #d5554f;
+        border: none;
+        border-radius: 5px;
+        font-size: 12px;
+        line-height: 22px;
+        color: #f0d8d9;
+        font-family: "Lato";
+        font-weight: 400;
+        text-align: left;
+    }
+
+    /* Footer */
+    #wrapper-footer {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    body {
+        width: 100%;
+    }
+
+    .header,
+    .slider,
+    .services,
+    .portfolio,
+    .get-a-quote,
+    .about-us,
+    footer {
+        margin: 0 auto;
+        padding: 0 30px;
+        width: 315px;
+    }
+
+    /* Header */
+    #logo {
+        margin: 35px 99.33px;
+    }
+
+    #main-menu {
+        display: none;
+    }
+
+    /* Slider */
+    #wrapper-slider {
+        width: 100%;
+        height: 100%;
+    }
+    .slider {
+        height: 220px;
+        padding: 0 10.25px;
+        width: 354.5px;  
+    }
+
+    img.arrows {
+        padding: 96.5px 0px 96.5px 2px;
+        position: absolute;
+    }
+
+    .slider #first-slide div.phone.vertical {
+        position: absolute;
+        left: 17px;
+        top: 20px;
+    }
+
+    .slider #first-slide div.phone.vertical img {
+        width: 88px;
+    }
+    
+    .slider #first-slide .phone.vertical.background {
+        position: absolute;
+        height: 122px;
+        left: -4px;
+        top: 24px;
+    }
+    
+    .slider #first-slide div.phone.horizontal {
+        position: absolute;
+        left: 131px;
+        top: 65px;
+    }
+    
+    .slider #first-slide div.phone.horizontal img {
+        height: 88px;
+    }
+    
+    .slider #first-slide .phone.horizontal.background {
+        position: absolute;
+        width: 122px;
+        left: 22px;
+        top: -5px;
+    }
+    
+    .slider #second-slide img {
+        position: absolute;
+        width: 182px;
+        left: 70px;
+        top: 19px;
+    }
+    
+    /* Our Services */
+    #wrapper-services {
+        width: 100%;
+        height: 100%;
+    }
+    .services {
+        padding-top: 25px;
+        padding-bottom: 15px;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 315px;
+        grid-template-rows: auto auto 119px 119px 119px 119px 119px 119px;
+        grid-column-gap: 53px;
+    }
+
+    .services h2 {
+        margin-top: 15px;
+    }
+    
+    .services>p {
+        margin-bottom: 56px;
+    }
+    
+    .services>h2, .services>p {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    
+    /* Portfolio */
+    #wrapper-portfolio {
+        width: 100%;
+        height: 100%;
+    }
+    .portfolio {
+        padding-top: 42px;
+        padding-bottom: 42px;
+        height: 100%;
+    }
+
+    #portfolio > ul {
+        height: 554px;
+        display: grid;
+        grid-template-columns: repeat(2, 151px);
+        grid-template-rows: repeat(4, 128px);
+        grid-column-gap: 13px;
+        grid-row-gap: 14px;
+        overflow: hidden;
+    }
+
+    #portfolio > ul img {
+        width: 100%;
+    }
+    
+    /* About Us */
+    #wrapper-about-us {
+        width: 100%;
+        height: 100%;
+    }
+    .about-us {
+        padding-top: 33px;
+        padding-bottom: 45px;
+        height: 100%;
+    }
+    #team {
+        display: grid;
+        grid-template-columns: 315px;
+        grid-row-gap: 34px;
+        margin-top: 44px;
+    }
+
+    #team img.person {
+        width: 100%;
+    }
+    
+    /* Get a Quote */
+    #wrapper-quote {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .get-a-quote {
+        display: grid;
+        grid-template-columns: 315px;
+        grid-template-rows: auto auto auto;
+        padding-top: 44px;
+        padding-bottom: 42px;
+    }
+
+    .get-a-quote>h2 {
+        padding-top: 0px;
+    }
+
+    .get-a-quote>h2, .get-a-quote>p {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    
+    .get-a-quote input, .get-a-quote textarea {
+        width: 285px;
+        padding: 9px 15px 7px;
+        margin-top: 12px;
+        background-color: #d5554f;
+        border: none;
+        border-radius: 5px;
+        font-size: 12px;
+        line-height: 22px;
+        color: #f0d8d9;
+        font-family: "Lato";
+        font-weight: 400;
+        text-align: left;
+    }
+
+    /* Footer */
+    #wrapper-footer {
+        width: 100%;
+        height: 76px;
+    }
+
+    #copyright p {
+        display: none;
+    }
+
+    footer #social-links {
+        width: 152px;
+        height: 32px;
+        margin: 0 81.5px;
+    }
+
+    footer #social-links img {
+        width: 32px;
+    }
 }
