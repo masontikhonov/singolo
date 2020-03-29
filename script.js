@@ -21,14 +21,45 @@ const smoothScroll = (event) => {
     addScrollEvent();
 }
 
+let currentSlidePos = 0;
 const changeSlide = (event) => {
     if (event.target.parentElement.tagName === 'A') {
         const BUTTON = event.target.parentElement;
+        const SLIDES = SLIDER.querySelectorAll('.items > .item');
+        const SLIDER_WIDTH = SLIDER.querySelector('.items').offsetWidth;
+        const maxMoveLeft = -SLIDER_WIDTH * (SLIDES.length - 1);
         if (BUTTON.className.includes('arrow-left')) {
-            console.log('arrow-left');
+            if (currentSlidePos < 0) {
+                currentSlidePos += SLIDER_WIDTH;
+                for (const item of SLIDES) {
+                    item.style['transform'] = `translate3d(${currentSlidePos}px, 0, 0)`;
+                }
+            } else {
+                currentSlidePos = maxMoveLeft;
+                for (const item of SLIDES) {
+                    item.style['transform'] = `translate3d(${currentSlidePos}px, 0, 0)`;
+                }
+            }
+            SLIDES.forEach(li => li.classList.remove('active'));
+            SLIDES[-currentSlidePos / SLIDER_WIDTH].classList.add('active');
+            SLIDER.style.backgroundColor = getComputedStyle(SLIDER.querySelector('.active'), null)['background-color'];
         }
         if (BUTTON.className.includes('arrow-right')) {
-            console.log('arrow-right');
+            if (currentSlidePos > maxMoveLeft) {
+                currentSlidePos -= SLIDER_WIDTH;
+                for (const item of SLIDES) {
+                    item.style['transform'] = `translate3d(${currentSlidePos}px, 0, 0)`;
+                }
+            } else {
+                currentSlidePos = 0;
+                for (const item of SLIDES) {
+                    item.style['transform'] = `translate3d(${currentSlidePos}px, 0, 0)`;
+                }
+            }
+            SLIDES.forEach(li => li.classList.remove('active'));
+            SLIDES[-currentSlidePos / SLIDER_WIDTH].classList.add('active');
+            SLIDER.style.backgroundColor = getComputedStyle(SLIDER.querySelector('.active'), null)['background-color'];
+
         }
     }
 }
