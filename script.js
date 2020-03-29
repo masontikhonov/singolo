@@ -64,6 +64,24 @@ const changeSlide = (event) => {
     }
 }
 
+const changePhoneState = (event) => {
+    if (event.target.tagName === 'IMG') {
+        const targetClasses = event.target.classList;
+        if (targetClasses.contains('background') && !targetClasses.contains('hidden')) {
+            event.target.classList.add('hidden');
+            return;
+        }
+        if (targetClasses.contains('frame') && !event.target.closest('div').querySelector('.background').classList.contains('hidden')) {
+            event.target.closest('div').querySelector('.background').classList.add('hidden');
+            return;
+        }
+        if (targetClasses.contains('frame') && event.target.closest('div').querySelector('.background').classList.contains('hidden')) {
+            event.target.closest('div').querySelector('.background').classList.remove('hidden');
+            return;
+        }
+    }
+}
+
 const randomReorder = (event) => {
     if (event.target.tagName === 'A') {
         event.preventDefault();
@@ -133,6 +151,7 @@ MAIN_MENU.addEventListener('click', smoothScroll);
 
 const SLIDER = document.getElementById('wrapper-slider');
 SLIDER.addEventListener('click', changeSlide);
+SLIDER.querySelector('.items').addEventListener('click', changePhoneState);
 
 const PORTFOLIO_MENU = document.getElementById('portfolio-menu').querySelector('ul');
 PORTFOLIO_MENU.addEventListener('click', makeActive);

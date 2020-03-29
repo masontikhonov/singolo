@@ -246,16 +246,34 @@ header {
     background-color: #648BF0;
 }
 
-#iphone-v {
+.slider #first-slide div.phone.vertical {
     position: absolute;
-    top: -17px;
-    left: 80px;
+    left: 54px;
+    top: 53px;
 }
 
-#iphone-h {
+.slider #first-slide .phone.vertical.background {
     position: absolute;
-    top: 69px;
-    left: 330px;
+    left: 14px;
+    top: 65px;
+}
+
+.slider #first-slide div.phone.horizontal {
+    position: absolute;
+    left: 367px;
+    top: 174px;
+}
+
+.slider #first-slide .phone.horizontal.background {
+    position: absolute;
+    left: 60px;
+    top: 14px;
+}
+
+.slider #second-slide img {
+    position: absolute;
+    left: 193.5px;
+    top: 40.5px;
 }
 
 a.arrows {
